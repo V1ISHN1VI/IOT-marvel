@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Toggle Background Color</title>
+<body>
+<center><b><u><font size="40" color="Blue" face="Arial">IOT LEVEL-1</u></b></center></font>
+<p><h1>Task 3:BASICS OF CREATING A WEBSITE</h3></p>
+<h2><center>Wanna see the change?</center></h2>
+</body>
+  <style>
+    body {
+      background-color: white;
+      transition: background-color 0.5s ease-in-out;
+    }
+    .button {
+      padding: 10px 20px;
+      border: 2px solid black;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color:black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <center><button id="toggleBtn" class="button">Click me</button></center>
+  <script>
+    const button = document.getElementById('toggleBtn');
+    button.addEventListener('click', function() {
+      const body = document.querySelector('body');
+      const currentColor = body.style.backgroundColor;
+      body.style.backgroundColor = currentColor === 'white' ? 'Orange' : 'white';
+    });
+  </script>
+</body>
+</html>
